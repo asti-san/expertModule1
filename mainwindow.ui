@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>421</width>
-      <height>331</height>
+      <width>431</width>
+      <height>341</height>
      </rect>
     </property>
    </widget>
@@ -63,7 +63,7 @@
    <widget class="QPushButton" name="button_save_item">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>290</x>
       <y>380</y>
       <width>80</width>
       <height>21</height>
@@ -73,20 +73,29 @@
      <string>save</string>
     </property>
    </widget>
-   <widget class="QTableWidget" name="dots_edit_list">
+   <widget class="QTableWidget" name="points_list">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>350</y>
-      <width>171</width>
+      <width>281</width>
       <height>171</height>
      </rect>
     </property>
+    <property name="columnCount">
+     <number>3</number>
+    </property>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <column/>
+    <column/>
+    <column/>
    </widget>
    <widget class="QPushButton" name="button_new">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>290</x>
       <y>350</y>
       <width>80</width>
       <height>21</height>
@@ -99,7 +108,7 @@
    <widget class="QPushButton" name="button_clear_item">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>290</x>
       <y>410</y>
       <width>80</width>
       <height>21</height>
