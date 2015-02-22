@@ -21,10 +21,11 @@ public:
 
 private slots:
 	void on_button_new_clicked();
-	void on_button_clear_item_clicked();
-	void addDotItem();
+	void on_button_clear_item_clicked();	
 	void onPlotClicked();
-
+	void addPointItem(double x, double y);
+	void addPointItem();
+	void removePointItem();
 
 
 	private:
