@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "qcustomplot.h"
+#include <vector>
+#include <QPair>
 
 namespace Ui
 {
@@ -12,24 +14,25 @@ namespace Ui
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-signals:
-    void mouseClickEvent();
 
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+signals:
+    void mouseClickEvent();
+
 private slots:
 	void on_button_new_clicked();
 	void on_button_clear_item_clicked();	
 	void onPlotClicked();
-	void addPointItem(double x, double y);
+    void addPointItem(double, double);
 	void addPointItem();
 	void removePointItem();
 
-
-	private:
+private:
     Ui::MainWindow *ui;
+    std::vector<QPointF> coordOfDots;
 };
 
 #endif // MAINWINDOW_H

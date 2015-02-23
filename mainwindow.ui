@@ -146,6 +146,9 @@
    <extends>QWidget</extends>
    <header>qcustomplot.h</header>
    <container>1</container>
+   <slots>
+    <signal>addedPoints(double,double)</signal>
+   </slots>
   </customwidget>
  </customwidgets>
  <resources/>
