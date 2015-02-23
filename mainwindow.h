@@ -21,7 +21,6 @@ public:
 
 signals:
     void mouseClickEvent();
-    void addedPoints(double, double);
 
 private slots:
 	void on_button_new_clicked();

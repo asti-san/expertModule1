@@ -440,6 +440,8 @@ public:
   
 signals:
   void layerChanged(QCPLayer *newLayer);
+
+
   
 protected:
   // property members:
@@ -1840,6 +1842,8 @@ signals:
   void selectionChangedByUser();
   void beforeReplot();
   void afterReplot();
+
+  void addedPoints(double, double);
   
 protected:
   // property members:

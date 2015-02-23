@@ -34,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
 	//~PointList stuff
 
 	connect(ui->plot, SIGNAL(mousePress(QMouseEvent*)), this, SLOT(onPlotClicked()));
-    connect(ui->plot, SIGNAL(addedPoints(double, double)), ui->points_list, SLOT(addPointItem(double, double)));
+    connect(ui->plot, SIGNAL(addedPoints(double,double)), this, SLOT(addPointItem(double, double)));
 
 }
 
@@ -52,8 +52,10 @@ void MainWindow::onPlotClicked()
 	double x = ui->plot->xAxis->pixelToCoord(p.x());
 	double y = ui->plot->yAxis->pixelToCoord(p.y());
     coordOfDots.push_back(QPointF(x, y));
-    // sent the signal to points_list -> addPointItem()
-    // emit this->addedPoints(x, y);
+    // sent the signal to points_list -> addPointItem() from plot
+    //! seems like it doesn't work, i.e. signal isn't sent
+    //! TODO: realize how it works and fix it
+    emit ui->plot->addedPoints(x, y);
 
 	//Log coordinates
     std::cout << x << "\t" << y << std::endl;
